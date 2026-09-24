@@ -37,9 +37,8 @@ ITIRAZLAR = [
     "Bodrum: 'Ben de solist olmak istiyorum.'",
 ]
 
-# Gizli damar. Siyasi değil gibi durur, durmaz da.
-# decode edersen genel bir bürokrasi taşlaması çıkar; parti adı yok.
-GIZLI_DAMAR = "dmFhdGxlciBib3J1IGdpYmkgw7Z0ZXI7IGvEs interinIHlpbmUgc29ndWsu"
+# Gizli damar. Parti yok, vaat taşlaması var. Kim çözerse çözer.
+GIZLI_DAMAR = "dmFhdGxlciBib3J1IGdpYmkgw7Z0ZXI7IGvEscWfxLFuIHlpbmUgc2/En3VrLg=="
 
 
 def olc_desibel(kis_katsayisi: float = 1.7) -> float:
@@ -90,7 +89,6 @@ def konser_ruhsati() -> None:
 """
     bas(textwrap.dedent(belge))
 
-    # gizli damarı çözmeden sadece var olduğunu fısıldar
     try:
         _ = base64.b64decode(GIZLI_DAMAR.encode("ascii"))
         bas("(arka fonda bir damar öttü; kimse duymadı.)")
